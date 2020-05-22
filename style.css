@@ -6,7 +6,7 @@ body{
 .navbar{
    background-color: #bd4c8c;
    background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
-   font-family: arial !important;
+   font-family: "Comic Sans MS" !important;
   width: 100%;
   position: fixed;
   top: 0px;
@@ -15,7 +15,9 @@ body{
   flex-direction: row;
   z-index: 1;
 }
-
+.navbar h1{
+  font-weight: normal;
+}
 
   .nav-link{
     display: inline-block;
@@ -64,7 +66,7 @@ body{
 
 #top{
   width: 100%;
-  height: 70vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,31 +84,41 @@ body{
 }
 
 .about{
-  background-color: #bd4c8c;
-  background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
-  color: white;
-  width: 80%;
-  margin: 0px 10vw 200px 10vw;
-  padding: 0px 10px 0px 10px;
-  border-radius: 5%;
+  color: #bd4c8c;
+  font-size: 1.5vw;
+  width: 60%;
+  margin: auto;
   position: relative;
   animation-duration: 3s;
   animation-delay: 2s;
   animation-fill-mode: backwards;
-  animation-name: leftSlide;
+  animation-name: slide;
   overflow: hidden;
 }
 
-@keyframes leftSlide {
- from {left: -200px;}
- to {left: 0px;}
+.about h1{
+  font-size: 4vw;
+  text-align: center;
+}
+.about-me a{
+  text-decoration: none;
+  color: #bd4c8c;
+  font-weight: bold;
 }
 
-.about-me{
-  font-size: 25px;
-  padding: 0 2vw 0 5vw;
-  display: flex;
-  flex-direction: row;
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+
+
+@keyframes slide {
+ from {left: -200px;}
+ to {left: 0px;}
 }
 
 
@@ -133,26 +145,6 @@ body{
   cursor: pointer; /* Mouse pointer on hover */
 }
 
-
-#social{
-    color: #bd4c8c;
-  font-size: 15px;
-  padding: 0px 0px 0px 0px;
-  text-align: center;
-}
-#social .fa{
-  font-size: 50px;
-  padding: 10px;
-  color: #bd4c8c;
-}
-#contact{
-  margin-top: 100px;
-  color: #bd4c8c;
-text-align: center;
-  background: white;
-}
-
-
 .row{
   margin-top: 100px;
   width: 100%;
@@ -176,9 +168,10 @@ text-align: center;
   margin: 0.2em;
   padding: 0.5em;
 }
+
 .thumbnail img{
    height: 300px;
-  width: auto;
+   width: auto;
 }
 
 @media screen and (max-width: 1200px) {
@@ -186,9 +179,6 @@ text-align: center;
   {
     flex: 40%;
   }
-  #me {
-   display: none;
- }
 
 }
 
@@ -198,20 +188,8 @@ text-align: center;
   {
     flex: 100%;
   }
-  #contact_page
-  {
-    margin: 150px 2vw 100px 2vw;
-  }
 
 }
-
-@media screen and (min-width: 900px)
-{
-  #top{
-    height: 100vh;
-  }
-}
-
 
 
 
@@ -257,13 +235,10 @@ text-align: center;
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
-  display: flex;
-  flex-direction: column;
 }
 
 /* The Close Button */
 .close {
-  align-self: flex-end;
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -407,7 +382,28 @@ text-align: center;
 }
 
 .Description{
+  margin-left: auto;
+   margin-right: auto;
+   position: relative;
+   width: 100%;
    font-size: 20px;
+}
+
+#social{
+  border-top: solid #bd4c8c 2px;
+  background-color: inherit;
+  font-size: 15px;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+}
+#social .fa{
+  font-size: 50px;
+  padding: 10px;
+  color: #bd4c8c;
+}
+#contact{
+  margin-top: 100px;
+  text-align: center;
 }
 
 
@@ -424,27 +420,12 @@ text-align: center;
   justify-content: center;
   color: #bd4c8c;
 }
-
-
 #contact_page h2
 {
   font-size: 3vw;
   margin-top: 10px;
   font-family: FontAwesome;
   padding-left: 50%;
-}
-
-@media screen and (max-width: 800px) {
-  #contact_page
-  {
-    margin: 150px 2vw 100px 2vw;
-  }
-
-  #contact_page h2
-  {
-    font-size: 20px;
-  }
-
 }
 
 #mail_form{
@@ -486,13 +467,14 @@ text-align: left;
 #social_list{
   flex: 1 0 0;
   color: #bd4c8c;
+  font-size: 15px;
   padding: 100px 10px 50px 10px;
   text-align: right;
   display: flex;
   flex-direction: column;
 }
 #social_list .fa{
-  font-size: 3vw;
+  font-size: 50px;
   padding: 10px;
   color: #bd4c8c;
 }

@@ -12,22 +12,24 @@
 
   <header>
 
-  <div class="navbar">
-    <h1 style="color:white; font-size: 25px;"><a style="text-decoration: none; color:white;" href="#about">Mariamawit's Portfolio</a></h1>
-
-  <a class="nav-link nav-link-ltr" href="projects.html">Projects</a>
-  <a class="nav-link nav-link-ltr" href="research.html">Research</a>
-  <a class="nav-link nav-link-ltr" href="https://drive.google.com/file/d/1bCBmNTTxl6Xf4DP6LnLfExIwQA1dWJP-/view?usp=sharing" target="_blank">Resume</a>
-  <a class="nav-link nav-link-ltr" href="contacts.html">Contacts</a>
+  <div class="navbar" style="background: inherit; align-content: center; position: absolute; justify-content:space-around;">
+  <a style="color:pink" class="nav-link nav-link-ltr" href="aboutme.html">About Me</a>
+  <a style="color:pink" class="nav-link nav-link-ltr" href="projects.html">Projects</a>
+  <a style="color:pink" class="nav-link nav-link-ltr" href="research.html">Research</a>
+  <a style="color:pink " class="nav-link nav-link-ltr" href="https://drive.google.com/file/d/1bCBmNTTxl6Xf4DP6LnLfExIwQA1dWJP-/view?usp=sharing" target="_blank">Resume</a>
+  <a style="color:pink" class="nav-link nav-link-ltr" href="contacts.html">Contacts</a>
  </div>
      </header>
 
       <div  id="top">
         <h1 id="web-developer">Welcome to My Portfolio</h1>
+
+        <canvas class="background"></canvas>
+
        </div>
 
 
-  <div class="about" id="about">
+<!--  <div class="about" id="about">
     <h1 style="font-size: 4vw; text-align: center">About me <hr color></h1>
     <div class= "about-me">
       <div style=" display:flex;">
@@ -39,7 +41,7 @@
         <img id="me"src="https://imagizer.imageshack.com/v2/1000x1200q100/924/ulN2EP.png" style=" float: right;
   align-self: flex-end;" /> </div>
       </div>
-  </div>
+  </div>-->
 
 <div class="menu">
     <h1 style="color:white; font-size: 40px">Check these out</h1><br><br>
@@ -51,10 +53,16 @@
 </div>
 
 
+    <script src="particles.js"></script>
+    <script>
+    var particles = Particles.init({
+    	selector: '.background',
+      color: ['#DA0463', '#407899', '#DBEDF3'],
+      connectParticles: true
+    });
+    </script>
 
   <footer id="contact">
-
-<h3>Mariamawit Jembere 2020</h3>
 
   <div id="social">
     <a href="https://www.linkedin.com/in/mariamawit-jembere-394559182/" target="_blank" class="fa fa-linkedin"></a>

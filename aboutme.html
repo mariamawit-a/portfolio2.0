@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+  <title>About me</title>
+  <meta charset="UFT-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700,400italic|Montserrat:400,700|Cardo:400italic|Advent+Pro:100' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+
+  <div class="navbar" style="background: inherit; align-content: center; position: absolute; justify-content:space-around;">
+  <a style="color:pink" class="nav-link nav-link-ltr" href="aboutme.html">About Me</a>
+  <a style="color:pink" class="nav-link nav-link-ltr" href="projects.html">Projects</a>
+  <a style="color:pink" class="nav-link nav-link-ltr" href="research.html">Research</a>
+  <a style="color:pink " class="nav-link nav-link-ltr" href="https://drive.google.com/file/d/1bCBmNTTxl6Xf4DP6LnLfExIwQA1dWJP-/view?usp=sharing" target="_blank">Resume</a>
+  <a style="color:pink" class="nav-link nav-link-ltr" href="contacts.html">Contacts</a>
+ </div>
+  </header>
+
+  <div id="top">
+    <div class="about">
+    <h1>About me</h1>
+     <hr color>
+      <div class="about-me">
+      <p>Selam! To say a little about myself, I am passionate about exploring and learning new things. Ever since my chilldhood, I fall in love with the Physics of matters,
+        the Biology of our ever-evolving ecosystem, the nature inspired Engineerings, and now, the art of Computer Science. I am constantly searching for ways to get involved in hands-on projects,
+        or research projects that focus on data structure and algorithms, information and database theory, AI and machine learning, computer graphics, or other related area of study. Snoop around to know more about me.
+         Hope we get to <a href="contacts.html">connect</a>!
+      </p>
+      </div>
+    <hr color>
+    </div>
+    <canvas class="background"></canvas>
+  </div>
+
+    <script src="particles.js"></script>
+    <script>
+    var particles = Particles.init({
+      selector: '.background',
+      color: ['#DA0463', '#407899', '#DBEDF3'],
+      connectParticles: true
+    });
+    </script>
+
+    <footer id="contact">
+
+    <div id="social">
+      <a href="https://www.linkedin.com/in/mariamawit-jembere-394559182/" target="_blank" class="fa fa-linkedin"></a>
+      <a href="contacts.html" target="_blank" class="fa fa-google"></a>
+      <a href="https://github.com/mariamawit-a" target="_blank" class="fa fa-github"></a>
+      <a id="profile-link" href="https://www.freecodecamp.org/fcc6b457106-6657-4305-9ff6-fee6a99cdfb4" target="_blank"<i class="fa fa-free-code-camp"></i></a>
+    </div>
+
+   </footer>
+
+</body>
+</html>
