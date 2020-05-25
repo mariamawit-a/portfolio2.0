@@ -97,7 +97,7 @@ body{
 
 #web-developer{
   float: left;
-  font-size: 120px;
+  font-size: 9vw;
   animation: flow 10s ease-in-out infinite;
   background: linear-gradient(-60deg, purple, pink, white, lightblue);
   background-size: 300%;
@@ -108,8 +108,8 @@ body{
 
 .about{
   color: #bd4c8c;
-  font-size: 25px;
-  width: 60%;
+  font-size: 2vw;
+  width: 70vw;
   margin-bottom: 20px;
   margin: auto;
   position: relative;
