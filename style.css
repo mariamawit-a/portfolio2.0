@@ -113,8 +113,8 @@ body{
   margin-bottom: 20px;
   margin: auto;
   position: relative;
-  animation-duration: 3s;
-  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-delay: 1s;
   animation-fill-mode: backwards;
   animation-name: slide;
 }
@@ -178,7 +178,7 @@ body{
 
 .thumbnail{
   background-color: white;
-  hight: 100%;
+  height: 100%;
   text-align: center;
   font-style: italic;
   font-size: smaller;
@@ -198,7 +198,12 @@ body{
   {
     flex: 40%;
   }
-
+  #web-developer{
+    font-size: 10vh;
+  }
+  .background{
+    display: none;
+  }
 }
 
 
