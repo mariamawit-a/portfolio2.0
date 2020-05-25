@@ -11,6 +11,35 @@
 
 <body>
 
+  <!-- The overlay -->
+  <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+
+  </div>
+
+  <!-- Use any element to open/show the overlay navigation menu -->
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <script>
+      function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+
+    /* Close */
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+  </script>
+
       <div  id="top">
         <h1 id="web-developer">Hi, I am Mariamawit.</h1>
         <div class="about">
@@ -28,19 +57,10 @@
        </div>
 <canvas class="background"></canvas>
 
-<!--  <div class="about" id="about">
-    <h1 style="font-size: 4vw; text-align: center">About me <hr color></h1>
-    <div class= "about-me">
-      <div style=" display:flex;">
 
-      <p>Selam! To say a little about myself, I am passionate about trying and learning new things. Ever since my chilldhood, I have always been full invested in my education. I fall in love with the Physics of matters,
-        the Biology of our ever-evolving ecosystem, the nature inspired Engineerings, and now, the art of Computer Science. I am currently searching for ways to get involved in hands-on projects in the Tech sector,
-        or research projects that focus on data structure and algorithms, information and database theory, AI and machine learning, computer graphics, or other related area of study. Snoop around to know more about me. Hope we get to connect:)
-      </p>
-        <img id="me"src="https://imagizer.imageshack.com/v2/1000x1200q100/924/ulN2EP.png" style=" float: right;
+      <!--  <img id="me"src="https://imagizer.imageshack.com/v2/1000x1200q100/924/ulN2EP.png" style=" float: right;
   align-self: flex-end;" /> </div>
-      </div>
-  </div>-->
+      </div>-->
 
 <div class="menu">
   <div class="menu">
