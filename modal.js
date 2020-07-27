@@ -30,7 +30,6 @@ function createSliderObjects() {
 }
 
 function showDivs(divObject, n) {
-  debugger;
   var i;
   if (n > divObject.slideContents.length) {
     divObject.slideIndex = 1

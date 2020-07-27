@@ -1,68 +1,76 @@
 
 <!DOCTYPE html>
+<html>
 <head>
-  <title>Home</title>
-  <meta charset="UFT-8">
-  <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700,400italic|Montserrat:400,700|Cardo:400italic|Advent+Pro:100' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>Home</title>
+    <meta charset="UFT-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700,400italic|Montserrat:400,700|Cardo:400italic|Advent+Pro:100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+
+
+        body {
+            background-color: White;
+            background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
+        }
+    </style>
 </head>
+
+
 
 <body>
 
-  <header>
+    <header>
+        <div class="navbar">
+            <a id="logo" href="index.html"><img src="https://imagizer.imageshack.com/img924/5448/oLeBfI.png"></a>
+            <div id="menu">
+                <a class="nav-link nav-link-ltr" href="projects.html">Projects</a>
+                <a class="nav-link nav-link-ltr" href="research.html">Research</a>
+                <a class="nav-link nav-link-ltr" href="https://drive.google.com/file/d/1pJVWOV1yasg_zmuEzFz-DPwp1-5JhinA/view?usp=sharing" target="_blank">Resume</a>
+                <a class="nav-link nav-link-ltr" href="contacts.html">Contacts</a>
+            </div>
+        </div>
+    </header>
 
-    <div class="navbar">
-      <h1 style="color:white; font-size: 25px; font-family: arial;"><a style="text-decoration: none; color: white;"href="index.html">Mariamawit's Portfolio</a></h1>
 
-    <a class="nav-link nav-link-ltr" href="projects.html">Projects</a>
-    <a class="nav-link nav-link-ltr" href="research.html">Research</a>
-    <a class="nav-link nav-link-ltr" href="https://drive.google.com/file/d/1bCBmNTTxl6Xf4DP6LnLfExIwQA1dWJP-/view?usp=sharing" target="_blank">Resume</a>
-    <a class="nav-link nav-link-ltr" href="contacts.html">Contacts</a>
-   </div>
-</header>
+    <div id="contact_page">
 
 
-<div id="contact_page">
+        <form action="mailto:kaluasnake@gmail.com" method="post" enctype="text/plain">
 
-  <div id="mail_form">
-    <h2>Let's Connect!</h2>
-    <form action="mailto:kaluasnake@gmail.com" method="post" enctype="text/plain">
-    Name:<br>
-    <input id="name" type="text" name="name"><br>
-    E-mail address:<br>
-    <input id="email" type="text" name="mail"><br>
-    Message:<br>
-    <textarea id="message" name="message" size="50"></textarea><br><br>
-    <button id="submit" type="submit" value="Send">Submit</button>
-    <button id="reset" type="reset" value="Reset">Reset</button>
-    </form>
-  </div>
+            <input id="name" type="text" name="name" placeholder="Name"><br>
+            <input id="email" type="text" name="mail" placeholder="E-mail"><br>
+            <textarea id="message" name="message" size="50" placeholder="Tell me about it..."></textarea><br><br>
+            <button id="submit" type="submit" value="Send">Submit</button>
+            <button id="reset" type="reset" value="Reset">Clear</button>
+        </form>
+        <hr color=pink>
+        <div id="social_list">
+            <button><a href="https://www.linkedin.com/in/mariamawit-jembere-394559182/" target="_blank" class="fa fa-linkedin"></a></button>
+            <button><a href="https://github.com/mariamawit-a" target="_blank" class="fa fa-github"></a></button>
+            <button><a href="https://www.freecodecamp.org/fcc6b457106-6657-4305-9ff6-fee6a99cdfb4" target="_blank"<i class="fa fa-free-code-camp"></i></a></button>
+            <button><a href="https://www.codecademy.com/profiles/mARIAMAWITJEMBERE0718587374" target="_blank"<i class="fa fa-database"></i></a></button>
+        </div>
 
-    <div id="social_list">
-      <button><a href="https://www.linkedin.com/in/mariamawit-jembere-394559182/" target="_blank" class="fa fa-linkedin"></a></button>
-      <button><a href="contacts.html" target="_blank" class="fa fa-google"></a></button>
-      <button><a href="https://github.com/mariamawit-a" target="_blank" class="fa fa-github"></a></button>
-      <button><a id="profile-link" href="https://www.freecodecamp.org/fcc6b457106-6657-4305-9ff6-fee6a99cdfb4" target="_blank"<i class="fa fa-free-code-camp"></i></a></button>
+
     </div>
+    <!--I was trying to use php
+        <form method="post" name="myemailform" action="contact.php">
+          <p>
+            <label for='name'>Enter Name:<label><br>
+            <input type="text" name='name'>
+          </p>
+          <p>
+            <label for='email'>Enter Email Address:<label><br>
+            <input type="text" name='email'>
+          </p>
 
-</div>
-
-<!--I was trying to use php
-    <form method="post" name="myemailform" action="contact.php">
-      <p>
-        <label for='name'>Enter Name:<label><br>
-        <input type="text" name='name'>
-      </p>
-      <p>
-        <label for='email'>Enter Email Address:<label><br>
-        <input type="text" name='email'>
-      </p>
-
-      <textarea name='message'></textarea>
-      <input type="submit" value="Send Form">
-  </form>-->
+          <textarea name='message'></textarea>
+          <input type="submit" value="Send Form">
+      </form>-->
 
 </body>
 

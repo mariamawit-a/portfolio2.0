@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <meta charset="UFT-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700,400italic|Montserrat:400,700|Cardo:400italic|Advent+Pro:100' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style>
+      a:hover {
+          font-weight: bolder;
+      }
+      p {
+          line-height: 2;
+      }
+  </style>
+</head>
+
+<body>
+
+      <div id="top" class="box">
+        <div class="header">
+          <div class="meup"><img id="meup"src="https://imagizer.imageshack.com/v2/1000x1200q100/924/ulN2EP.png"/></div>
+          <div class="head">
+            <div id ="status">
+              <div class="status"><i class="fa fa-tag"></i><p style="text-align: center;">Mariamawit Jembere</p></div>
+              <div class="status"><i class="fa fa-book"></i><p style="text-align: center;">SMC&rarr;UC Irvine</p></div>
+              <div class="status"><i class="fa fa-code"></i><p style="text-align: center;">Aspiring SWE</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="about">
+            <p>Selam! To say a little about myself, I am passionate about exploring and learning new things. Ever since my chilldhood, I fall in love with the Physics of matters,
+              the Biology of our ever-evolving ecosystem, the nature inspired Engineerings, and now, the art of Computer Science. I am constantly searching for ways to get involved in hands-on projects,
+              or research projects that focus on data structure and algorithms, information and database theory, AI and machine learning, computer graphics, or other related area of study. Snoop around to know more about me.
+               Hope we get to <a href="contacts.html">connect</a>!
+            </p>
+        </div>
+       </div>
+
+       <div class="box">
+          <div class="header">
+                <a class="title" href="projects.html"><i class="fa fa-desktop"></i><p>PROJECTS</p></a>
+          </div>
+         <div class="projects">
+             <a  href="https://github.com/mariamawit-a/Easy-breakfast" target="_blank"><i class="fa fa-cutlery"></i><p>Easy Breakfast &#124; Recipe Application &#124; Language(s): Java, JavaFx API, CSS </p></a>
+             <a  href="https://github.com/mariamawit-a/Java-2D-Game" target="_blank"><i class="fa fa-gamepad"></i><p>Attack on Jupiter &#124; 2D Video Game &#124; Language(s): Java, JavaFx API, CSS</p></a>
+             <a  href="https://github.com/mariamawit-a/mariamawit-a.github.io" target="_blank"><i class="fa fa-html5"></i><p>My Portfolio &#124; Portfolio Website &#124; Language(s): HTML, CSS, JavaScript</p></a>
+         </div>
+        </div>
+
+        <div class="box">
+          <div class="header">
+               <a class="title" href="research.html"><i class="fa fa-bar-chart"></i><p>Research</p></a>
+          </div>
+          <div class="about">
+            <div class="research">
+                <a  href="https://datasmart.ash.harvard.edu/" target="_blank"><i class="fa fa-map-marker"></i><p>Data-Smart City Solutions</p></a>
+                <a  href="https://www.hks.harvard.edu/" target="_blank"><i class="fa fa-university"></i><p>Harvard Kennedy School</p></a>
+                <a  href="research.html"><i class="fa fa-database"></i><p>Data-driven Decision-making Methods and Procedures</p></a>
+            </div>
+              <p>The big data approach to urban decision-making has become increasingly prevalent. However, we have yet limited understanding of how
+                organizations can effectively translate its potential into both social and economic value. Considering the growing reliance on data
+                we should be more critical about the processes of data creation and interpretation. Data is a strategic asset, but it&prime;s only valuable
+                if it&prime;s used constructively and appropriately to deliver results. We seek to understand the potential shortcomings in these processes
+                by interrogating the current flow of data-driven decision-making.
+
+              </p>
+          </div>
+         </div>
+
+         <div class="box">
+           <div class="header">
+                 <a class="title" href="https://drive.google.com/file/d/1Aa_qILScSya6eQt01FAvlTIXz2EVjkCd/view?usp=sharing" target="_blank"><i class="fa fa-drivers-license"></i><p> Resume</p></a>
+           </div>
+           <div class="about">
+               <p>
+                   Meticulous and motivated student working towards a BS in Computer Science at UC Irvine. Earned AS in Computer Science and AS-T in Mathematics
+                   from Santa Monica College (GPA 3.95). Currently participating in Snap Engineering Academy, hands-on, 120-hour Software Engineering training 
+                   course presented by Snap Inc. and L.A. Tech Talent Pipeline. Previous 4-month internship experience with data analysis and making data-driven decisions. 
+                   Analyzed raw data, written/verbal informations, and policies to identify flaws and gap between data experts and decision-making executives.
+               </p>
+           </div>
+          </div>
+
+      <canvas class="background" style="width: 100%; height: 100%;"></canvas>
+      <script src="particles.js"></script>
+      <script>
+      var particles = Particles.init({
+        selector: '.background',
+        color: ['#DA0463', '#407899', '#DBEDF3'],
+        connectParticles: true
+      });
+
+      </script>
+
+      <footer id="indexcontact">
+      <p>Built with HTML5/CSS3/JS &#124; Created by Mariamawit Jembere</p>
+      <div id="social">
+        <a href="https://www.linkedin.com/in/mariamawit-jembere-394559182/" target="_blank" class="fa fa-linkedin"></a>
+        <a href="contacts.html" target="_blank" class="fa fa-google"></a>
+        <a href="https://github.com/mariamawit-a" target="_blank" class="fa fa-github"></a>
+        <a id="profile-link" href="https://www.freecodecamp.org/fcc6b457106-6657-4305-9ff6-fee6a99cdfb4" target="_blank"><i class="fa fa-free-code-camp"></i></a>
+      </div>
+    </footer>
+
+
+</body>
+
+</html>

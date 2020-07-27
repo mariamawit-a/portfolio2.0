@@ -1,13 +1,209 @@
-body{
+
+html, body{
   overflow-x: hidden;
   margin: 0px 0px;
+    height:100%;
 
 }
+
+.mainInner{
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.mainInner div{
+    display:table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+#sidebarMenu {
+    z-index: 1;
+    height: auto;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transform: translateY(-300px);
+    transition: transform 250ms ease-in-out;
+    background-color: #fff;
+    background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
+    -webkit-box-shadow: 0 4px 6px -6px #222;
+    -moz-box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 0 4px 6px -6px #222;
+}
+.sidebarMenuInner{
+    color: pink;
+    margin:0;
+    padding:0;
+}
+.sidebarMenuInner li{
+    list-style: none;
+    font-size: 20px;
+    color:#bd4c8c;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 50px;
+    padding-top: 20px;
+    border-bottom: solid pink 1px;
+}
+.sidebarMenuInner li span{
+    display: block;
+    font-size: 14px;
+}
+.sidebarMenuInner li a{
+    color:#bd4c8c;
+    font-family: 'Advent Pro', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.sidebarMenuInner li a:hover{
+      color: pink;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: fixed;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 30px;
+    left: 15px;
+    height: 30px;
+    width: 30px;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #bd4c8c;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -8px;
+}
+
+#welcome{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #fff;
+  background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
+}
+
+#welcome {
+ text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+  text-align: center;
+}
+#welcome h1 {
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 96px;
+  color:  #bd4c8c;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  line-height: 100px;
+   margin-top: 18vw;
+   animation: caret;
+}
+#welcome h5 {
+  font-size: 20px;
+  font-family: 'Advent Pro', sans-serif;
+  color:  #bd4c8c;
+  top: 10vh;
+}
+#welcome span {
+  border-right: .05em solid pink;
+  animation: caret 1s steps(1) infinite;
+}
+
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.button-div {
+    display:flex;
+    justify-content:center;
+}
+
+.button {
+    position: fixed;
+    bottom: 0px;
+    padding: 15px 15px;
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: pink;
+    border: none;
+    box-shadow: 0 9px #ff4da6;
+}
+
+.button:hover {background-color:  #bd4c8c;}
+
+
 .navbar{
    background-color: #bd4c8c;
    background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
    font-family: "Comic Sans MS" !important;
   width: 100%;
+  padding-bottom: 0;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -15,9 +211,18 @@ body{
   flex-direction: row;
   z-index: 1;
 }
-.navbar h1{
-  font-weight: normal;
+
+#logo img{
+  height: 80px;
 }
+#menu{
+  margin-left: 15%;
+  margin-bottom: 5px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .nav-link-Itr{
   display: inline-block;
   position: fixed;
@@ -29,11 +234,10 @@ body{
   .nav-link{
     display: inline-block;
     position: relative;
-    margin-left: 10vw;
-    margin-top: 30px;
+    align-self:flex-end;
     font-size: 20px;
     color: white;
-    font-family: arial;
+    font-family: Montserrat;
     text-decoration: none;
 }
 
@@ -71,68 +275,12 @@ body{
   }
 }
 
-/* The Overlay (background) */
-.overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */
-  height: 100%;
-  width: 0;
-  position: fixed; /* Stay in place */
-  z-index: 99; /* Sit on top */
-  left: 0;
-  top: 0;
-  background-color: rgb(0,0,0); /* Black fallback color */
-  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-}
 
-/* Position the content inside the overlay */
-.overlay-content {
-  position: relative;
-  top: 25%; /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-}
-
-/* The navigation links inside the overlay */
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
-}
-
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
-}
-
-/* Position the close button (top right corner) */
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
-
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
-
-
-#top{
-  width: 100%;
-  border-left: : solid #bd4c8c 5px;
-  border-right: : solid #bd4c8c 5px;
+.box{
+  border: solid 1px  #bd4c8c;
+  margin: 5vw 10vw;
+  background-color: #bd4c8c;
+  background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,79 +288,256 @@ body{
 }
 
 
-#web-developer{
-  word-wrap: break-word;
-  font-size: 15vh;
-  animation: flow 10s ease-in-out infinite;
-  background: linear-gradient(-60deg, purple, pink, white, lightblue);
-  background-size: 300%;
-  -webkit-background-clip: text;
-        -background-clip: text;
-  -webkit-text-fill-color: transparent;
+.head {
+    font-size: 2vw;
+    animation: flow 10s ease-in-out infinite;
+    background: linear-gradient(-60deg, purple, pink, lightblue);
+    background-size: 600%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .about{
-  color: #bd4c8c;
-  font-size: 3.5vh;
-  width: 70vw;
-  margin-bottom: 20px;
-  margin: auto;
-  position: relative;
-  animation-duration: 2s;
-  animation-delay: 1s;
-  animation-fill-mode: backwards;
-  animation-name: slide;
+  font-size: 2vh;
+  line-height: 1.6;
+  font-family: Montserrat;
+  width: 50vw;
+  color: white;
+  border: none;
+  background: inherit;
+  font-size: 2vh;
+  animation: none;
 }
 
-.about-me a{
-  text-decoration: none;
-  font-family: 'Abel', sans-serif;
-  color: #bd4c8c;
+
+.about a{
+
+  color: inherit;
   font-weight: bold;
 }
 
+
+
 .background {
   position: absolute;
-  display: block;
   top: 0;
-  left: 0;
+  bottom: 0;
+  display: block;
   z-index: -1;
 }
 
 
+  .header{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding: 0vw 2vw;
+    justify-content:flex-start;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #f2f2f2, white 80%, transparent 20%, transparent);
+  }
 
-@keyframes slide {
- from {left: -200px;}
- to {left: 0px;}
+  .meup{
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding: 0;
+  }
+
+  #meup{
+      display:flex;
+      width: 25vh;
+      border: solid 1px #fff;
+      border-radius: 50%;
+    }
+
+  #status{
+    margin-left: 6vw;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    align-content: space-between;
+  }
+
+  .status{
+    font-family: Montserrat;
+    display: flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    margin-bottom: 1vh;
+    margin-right: 1.5vw;
+  }
+  .status i{
+    align-self: center;
+    font-size: 3vh;
+  }
+  .status p{
+    margin: 0 2px;
+    font-size: 3vh;
+  }
+
+
+
+  .title{
+    width: 100%;
+    font-family: Montserrat;
+    animation: flow 10s ease-in-out infinite;
+    background: linear-gradient(-60deg, purple, pink, lightblue);
+    background-size: 600%;
+    -webkit-background-clip: text;
+          -background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-content: flex-start;
+  }
+  .title i{
+    margin: 0;
+    margin-left: 4vw;
+    align-self: center;
+    font-size: 6vh;
+  }
+  .title p{
+    margin: 10px 40px;
+    font-size: 8vh;
+  }
+
+  .projects, .research{
+    color: #fff;
+    width: 50vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-content: space-around;
+  }
+  .projects a{
+    display: flex;
+    margin: 1vw;
+    border-bottom: solid 1px white;
+    padding-bottom: 0.5vh;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-content: flex-start;
+  }
+  .projects i{
+    color: white;
+    font-size: 3vh;
+  }
+  .projects p{
+    color: white;
+    font-family: monospace;
+    margin: 0 20px;
+    font-size: 2vh;
+  }
+
+  .research a{
+    display: flex;
+    margin: 0.5vw;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-content: flex-start;
+  }
+  .research p{
+    color: white;
+    font-weight: normal;
+    font-family: monospace;
+    margin: 0 20px;
+    font-size: 2vh;
+  }
+  .research i{
+    color: white;
+   font-size: 3vh;
+  }
+
+
+
+
+@media screen and (max-width:1000px){
+  #welcome h1 {
+    font-size: 50px;
+  }
+  #welcome h5 {
+    font-size: 10px;
+  }
+  #status{
+    margin-left: 2vw;
+    margin-top: 0;
+    flex-direction: column;
+  }
+  .status i{
+    font-size: 3vh;
+  }
+  .status p{
+    font-size: 2.5vh;
+  }
+  .title i{
+    font-size: 5vh;
+  }
+  .title p{
+    font-size: 5vh;
+  }
+  #meup{
+      width: 20vh;
+    }
+  .box{
+      margin: 0 5px 0 5px;
+  }
+  .about{
+    width: 80vw;
+    font-size: 2vw;
+  }
+  .projects, .research{
+    width: 90%;
+  }
+  .projects i,  .research i{
+    font-size: 2vw;
+  }
+  .projects p,  .research p{
+    font-size: 2vw;
+  }
+
 }
 
+@media screen and (max-width:900px){
+  .background{
+    display: none;
+  }
+  .status, .title{
+  -webkit-text-fill-color: pink;
+  background: none;
+  }
+  #social a{
+     -webkit-text-fill-color: pink;
+     background: #f2f2f2;
+   }
 
-.menu{
-  font-family: arial;
-  width: 100%;
-  background-color: #bd4c8c;
-  background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
-  box-shadow: 5px 5px #fff;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
+   #contact p,  #indexcontact p{
+     -webkit-text-fill-color: pink;
+     background:#f2f2f2;
+   }
 }
-.fa{
-  font-size: 10vh;
+
+.projectType{
+  background: linear-gradient(transparent 0%,transparent 49%, #cc0099 50%, #cc0099 51%, transparent 52%, transparent 100%);
 }
 
-.btn {
-  text-decoration: none; /* Remove borders */
-  background: inherit;
-  color: white; /* White text */
-  padding: 10px 100px; /* Some padding */
-  font-size: 2vh; /* Set a font size */
-  cursor: pointer; /* Mouse pointer on hover */
+.projectType span {
+  background:#f2f2f2;
+  color: #cc0099;
+  border: solid 1px #cc0099;
+  border-radius: 40%;
+  font-family: Montserrat; font-size: 32px; line-height: 72px; margin: 0 0 0 24px;
+  padding: 0 20px;
+  position: relative;
 }
 
 .row{
-  margin-top: 100px;
+  margin-bottom: 100px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -245,12 +570,6 @@ body{
   {
     flex: 40%;
   }
-  #web-developer{
-    font-size: 10vh;
-  }
-  .background{
-    display: none;
-  }
 }
 
 
@@ -271,8 +590,12 @@ body{
 .content-section .thumbnail:hover h4, .content-section .thumbnail:hover p { color: #AFAFAF; }
 .content-section .thumbnail:hover img { opacity: 0.25;  }
 .content-section .thumbnail:after { font-family: 'FontAwesome'; content: '\f121'; color: #FFF; font-size: 48px; line-height: 80px; top: 70%; position: absolute; text-align: center; display: inline-block; width: 100%; transition: all .35s; opacity: 0; width: 86px; height: 86px; margin-left: auto; margin-right: auto; left: 0; right: 0; border-radius: 50%; background: transparent; border:3px solid transparent; }
-.content-section .thumbnail:hover:after { top: 25%; opacity: 1; color: #FFFFFF; background: #bd4c8c;; border:3px solid #FFFFFF; }
-.content-section { min-height: 100vh; padding-top: 70px; padding-bottom: 20px; }
+.content-section .thumbnailA:after {  content: '\f121'; }
+.content-section .thumbnailB:after {  content: '\f13b'; }
+.content-section .thumbnailC:after {  content: '\f1b3'; }
+.content-section .thumbnailD:after {  content: '\f0c3'; }
+.content-section .thumbnail:hover:after { top: 25%; opacity: 1; color: #FFFFFF; background: #bd4c8c; border:3px solid #FFFFFF; }
+.content-section { min-height: 100vh; padding-top: 150px; padding-bottom: 20px; }
 .content-section p.lead { font-family: 'Cardo', serif; font-size: 19px; line-height: 1.35em; margin-bottom: 25px; }
 .content-section p.lead em { font-size: 14px; }
 .content-section p em { font-size: 14px;}
@@ -281,7 +604,7 @@ body{
 
 /* The Modal (background) */
 .description{
-  decoration: none;
+  text-decoration: none;
   border: none;
   background: inherit;
   font-family: inherit;
@@ -324,7 +647,7 @@ body{
 }
 
 #SmartCity{
-  margin:auto;
+  margin: 50px;
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
@@ -332,6 +655,27 @@ body{
   justify-content: center;
   position: relative;
 }
+
+hr.hrinresearch{
+  height: 30px;
+  border-style: solid;
+  background-color: #bd4c8c;
+  background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
+  border-color: #8c8b8b;
+  border-width: 1px 1px 1px 0;
+  border-radius: 20px;
+}
+hr.hrinresearch:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #8c8b8b;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+
 
 * {box-sizing:border-box}
 
@@ -356,7 +700,6 @@ body{
 }
 .mySlides figcaption{
   background-color: White;
-  background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
   text-align: center;
   padding: 2px;
 }
@@ -457,96 +800,134 @@ body{
    font-size: 20px;
 }
 
-#contact{
-  width: 100%;
-  background-color: #bd4c8c;
-  background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
-  padding-top: 10px;
-  text-align: center;
-}
-#contact p{
-  color: #fff;
-  font-size: 20px;
-}
-#social{
-  text-align: center;
-}
-#social .fa{
-  font-size: 40px;
-  padding: 10px;
-  color: #fff;
+
+#contact_page {
+    margin: 150px 450px 100px 350px;
+    padding: 20px 5px 10px 10px;
+    background: white;
+    border: solid 1px pink;
+    font-family: Arial;
+    justify-content: center;
+    color: #bd4c8c;
 }
 
-
-
-#contact_page
-{
-  margin: 150px 20vw 100px 20vw;
-  padding: 20px 10px 20px 10px;
-  animation: flow 10s ease-in-out infinite;
-  background: linear-gradient(-60deg, purple, pink, white, lightblue);
-  background-size: 300%;
-  font-family: Arial;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  color: #bd4c8c;
-}
-#contact_page h2
-{
-  font-size: 3vw;
-  margin-top: 10px;
-  font-family: FontAwesome;
-  padding-left: 50%;
+@media screen and (max-width: 1000px) {
+    #contact_page {
+        margin: 150px 2vw 100px 2vw;
+    }
 }
 
-#mail_form{
-flex: 3 0 0;
-}
-#name{
-  width: 60%;
-  padding: 8px 5px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border-radius: 5%;
-}
-#email{
-  width: 60%;
-  padding: 8px 5px;
-  margin: 8px 0;
-  border-radius: 5%;
-  flex: 2 0 0;
-}
-#message{
-  vertical-align: middle;
-  width: 80%;
-  padding-bottom: 10%;
-  margin: 8px 0;
-}
-#submit{
-color: #bd4c8c;
-padding: 8px 10px;
-margin: 10px 2px 0px 2px;
-text-align: left;
-}
-#reset{
-color: #bd4c8c;
-padding: 8px 10px;
-margin: 10px 2px 0px 0px;
-text-align: left;
+#name {
+    width: 70%;
+    padding: 8px 5px;
+    margin: 8px 0;
+    border: none;
+    color: pink;
+    border-bottom: solid 3px pink;
 }
 
-#social_list{
-  flex: 1 0 0;
-  color: #bd4c8c;
-  font-size: 15px;
-  padding: 100px 10px 50px 10px;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
+#email {
+    width: 70%;
+    padding: 8px 5px;
+    margin: 8px 0;
+    border: none;
+    color: pink;
+    border-bottom: solid 3px pink;
 }
-#social_list .fa{
-  font-size: 50px;
-  padding: 10px;
-  color: #bd4c8c;
+
+#message {
+    vertical-align: middle;
+    border: solid pink 3px;
+    width: 80%;
+    padding-bottom: 10%;
+    margin: 8px 0;
 }
+
+#submit {
+    color: gray;
+    border: solid pink 3px;
+    padding: 8px 10px;
+    margin: 10px 2px 0px 2px;
+    text-align: left;
+}
+
+#reset {
+    color: gray;
+    border: solid pink 3px;
+    padding: 8px 10px;
+    margin: 10px 2px 0px 0px;
+    text-align: left;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+#social_list {
+    color: #bd4c8c;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+    #social_list .fa {
+        font-size: 25px;
+        color: #d9d9d9;
+    }
+
+
+    #social_list a {
+        border-radius: 50%;
+        padding: 8px;
+        border: solid pink 1px;
+    }
+
+        #social_list a:hover {
+            background-color: pink;
+        }
+
+    #social_list button {
+        background: inherit;
+        border: none;
+    }
+
+#contact, #indexcontact {
+    width: 100%;
+    bottom: 0;
+    border-top: solid 1px silver;
+    background-color: #f2f2f2;
+    padding-top: 10px;
+    text-align: center;
+}
+
+    #contact p, #indexcontact p {
+        color: #fff;
+        font-family: monospace;
+        font-size: 2vh;
+        animation: flow 10s ease-in-out infinite;
+        background: linear-gradient(-60deg, silver, pink, lightblue);
+        background-size: 300%;
+        -webkit-background-clip: text;
+        -background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+a {
+    text-decoration: none;
+}
+
+#social {
+    text-align: center;
+    animation: flow 10s ease-in-out infinite;
+    background: linear-gradient(-60deg, silver, pink, lightblue);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+    #social .fa {
+        font-size: 40px;
+        padding: 10px;
+        color: #fff;
+    }
